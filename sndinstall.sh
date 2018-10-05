@@ -12,7 +12,7 @@ COIN_NAME='savenode'
 COIN_EXPLORER='http://http://149.28.146.108:3001/'
 COIN_PORT=29711
 RPC_PORT=29712
-
+COINKEY=$1
 NODEIP=$(curl -s4 icanhazip.com)
 
 BLUE="\033[0;34m"
@@ -285,7 +285,7 @@ function important_information() {
 function setup_node() {
   get_ip
   create_config
-  create_key
+  #create_key
   update_config
   enable_firewall
   #install_sentinel
